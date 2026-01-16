@@ -1,0 +1,100 @@
+{% extends "base.html" %}
+
+{% block title %}Litter Gallery - Ridgeback Finder{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <h1>Litter Gallery</h1>
+    <p>Browse recent litter photos from our registered breeders</p>
+</section>
+
+<section class="gallery-section">
+    <div class="gallery-tabs">
+        <button class="tab-btn active" data-tab="recent-images">Recent Photos</button>
+        <button class="tab-btn" data-tab="recent-litters">Recent Litters</button>
+    </div>
+
+    <div class="tab-content active" id="recent-images">
+        {% if images %}
+        <div class="image-gallery">
+            {% for image in images %}
+            <div class="gallery-item" data-breeder="{{ image.breeder_id }}">
+                <div class="gallery-image">
+                    <img src="{{ get_image_url(image.image_path) }}"
+                         alt="{{ image.caption or 'Ridgeback litter' }}"
+                         loading="lazy">
+                </div>
+                <div class="gallery-info">
+                    <h4>{{ image.kennel_name }}</h4>
+                    <p class="parents">{{ image.parent_info }}</p>
+                    {% if image.puppy_age_weeks %}
+                    <p class="age">{{ image.puppy_age_weeks }} weeks old</p>
+                    {% endif %}
+                    {% if image.caption %}
+                    <p class="caption">{{ image.caption }}</p>
+                    {% endif %}
+                    <a href="{{ url_for('breeder_detail', breeder_id=image.breeder_id) }}" class="link-breeder">View Breeder</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <h3>No photos yet</h3>
+            <p>Breeders haven't uploaded any litter photos yet.</p>
+        </div>
+        {% endif %}
+    </div>
+
+    <div class="tab-content" id="recent-litters">
+        {% if recent_litters %}
+        <div class="litters-list">
+            {% for item in recent_litters %}
+            <article class="litter-listing">
+                <div class="litter-header">
+                    <h3>{{ item.kennel_name }}</h3>
+                    <span class="litter-date">{{ item.birth_date.strftime('%B %d, %Y') }}</span>
+                </div>
+                <div class="litter-details">
+                    <p class="parents"><strong>{{ item.litter.sire_name }}</strong> x <strong>{{ item.litter.dam_name }}</strong></p>
+                    <p>{{ item.litter.num_puppies }} puppies | {{ item.image_count }} photos</p>
+                    {% if item.litter.available_puppies > 0 %}
+                    <span class="badge badge-success">{{ item.litter.available_puppies }} Available</span>
+                    {% endif %}
+                </div>
+                {% if item.litter.images %}
+                <div class="litter-preview">
+                    {% for img in item.litter.images[:3] %}
+                    <img src="{{ get_image_url(img.image_path) }}" alt="Litter preview" loading="lazy">
+                    {% endfor %}
+                </div>
+                {% endif %}
+                <div class="litter-actions">
+                    <a href="{{ url_for('breeder_gallery', breeder_id=item.breeder_id) }}" class="btn btn-outline btn-sm">View All Photos</a>
+                    <a href="{{ url_for('breeder_detail', breeder_id=item.breeder_id) }}" class="btn btn-outline btn-sm">Contact Breeder</a>
+                </div>
+            </article>
+            {% endfor %}
+        </div>
+        {% else %}
+        <div class="empty-state">
+            <h3>No litters recorded</h3>
+            <p>No breeders have recorded litters yet.</p>
+        </div>
+        {% endif %}
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.querySelectorAll('.tab-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(btn.dataset.tab).classList.add('active');
+    });
+});
+</script>
+{% endblock %}

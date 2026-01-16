@@ -1,0 +1,256 @@
+{
+  "breeders": [
+    {
+      "breeder_id": "ridgewood-rr",
+      "kennel_name": "Ridgewood Rhodesians",
+      "owner_name": "Sarah Mitchell",
+      "location": "Denver, CO",
+      "state": "CO",
+      "website": "https://ridgewoodrhodesians.example.com",
+      "email": "sarah@ridgewoodrhodesians.example.com",
+      "phone": "(303) 555-0142",
+      "years_breeding": 18,
+      "rrcus_member": true,
+      "description": "Breeding for health, temperament, and breed standard excellence since 2008. All our dogs are health tested and shown in conformation and lure coursing.",
+      "akc_awards": [
+        {"award_type": "BOM_GOLD", "dog_name": "Kennel Award", "date_earned": "2022-06-15"},
+        {"award_type": "GCHP", "dog_name": "GCH Ridgewood's Pride of Africa", "date_earned": "2024-03-20", "registration_number": "SR12345678"},
+        {"award_type": "GCHS", "dog_name": "GCH Ridgewood's Sunset Safari", "date_earned": "2023-11-10"},
+        {"award_type": "CH", "dog_name": "CH Ridgewood's African Dream", "date_earned": "2023-05-15"},
+        {"award_type": "CH", "dog_name": "CH Ridgewood's Savanna Star", "date_earned": "2024-01-20"},
+        {"award_type": "FC", "dog_name": "FC Ridgewood's Swift Runner", "date_earned": "2023-08-12"},
+        {"award_type": "MC", "dog_name": "Ridgewood's Chase the Wind", "date_earned": "2024-06-01"},
+        {"award_type": "CHIC", "dog_name": "GCH Ridgewood's Pride of Africa", "date_earned": "2022-01-15"},
+        {"award_type": "CHIC", "dog_name": "GCH Ridgewood's Sunset Safari", "date_earned": "2021-09-20"}
+      ],
+      "health_tests": [
+        {"test_type": "Hip", "result": "OFA Excellent", "dog_name": "GCH Ridgewood's Pride of Africa", "date_tested": "2022-01-10"},
+        {"test_type": "Elbow", "result": "OFA Normal", "dog_name": "GCH Ridgewood's Pride of Africa", "date_tested": "2022-01-10"},
+        {"test_type": "Thyroid", "result": "OFA Normal", "dog_name": "GCH Ridgewood's Pride of Africa", "date_tested": "2022-01-12"},
+        {"test_type": "Cardiac", "result": "OFA Normal", "dog_name": "GCH Ridgewood's Pride of Africa", "date_tested": "2022-01-15"},
+        {"test_type": "DM", "result": "Clear", "dog_name": "GCH Ridgewood's Pride of Africa", "date_tested": "2021-12-01"},
+        {"test_type": "Hip", "result": "OFA Good", "dog_name": "GCH Ridgewood's Sunset Safari", "date_tested": "2021-09-15"},
+        {"test_type": "Elbow", "result": "OFA Normal", "dog_name": "GCH Ridgewood's Sunset Safari", "date_tested": "2021-09-15"}
+      ],
+      "litters": [
+        {
+          "litter_id": "litter-2025-01",
+          "sire_name": "GCHP Ridgewood's Pride of Africa",
+          "dam_name": "GCHS Ridgewood's Sunset Safari",
+          "birth_date": "2025-01-05",
+          "num_puppies": 9,
+          "available_puppies": 4,
+          "description": "Stunning litter combining our top two show dogs. Puppies showing excellent structure and temperament.",
+          "images": [
+            {"image_path": "ridgewood/litter-2025-01-group.jpg", "caption": "The whole gang at 1 week", "date_taken": "2025-01-12", "puppy_age_weeks": 1},
+            {"image_path": "ridgewood/litter-2025-01-play.jpg", "caption": "Playtime begins", "date_taken": "2025-01-14", "puppy_age_weeks": 1}
+          ]
+        }
+      ]
+    },
+    {
+      "breeder_id": "lionheart-rr",
+      "kennel_name": "Lionheart Ridgebacks",
+      "owner_name": "Michael Chen",
+      "location": "Austin, TX",
+      "state": "TX",
+      "website": "https://lionheartridgebacks.example.com",
+      "email": "mike@lionheartridgebacks.example.com",
+      "phone": "(512) 555-0198",
+      "years_breeding": 12,
+      "rrcus_member": true,
+      "description": "Focused on producing versatile Ridgebacks that excel in conformation, lure coursing, and as family companions.",
+      "akc_awards": [
+        {"award_type": "BOM", "dog_name": "Kennel Award", "date_earned": "2021-03-10"},
+        {"award_type": "GCHG", "dog_name": "GCH Lionheart's Roaring Thunder", "date_earned": "2024-08-15"},
+        {"award_type": "GCH", "dog_name": "GCH Lionheart's Golden Sunrise", "date_earned": "2023-04-22"},
+        {"award_type": "CH", "dog_name": "CH Lionheart's Brave Heart", "date_earned": "2024-02-10"},
+        {"award_type": "CH", "dog_name": "CH Lionheart's Red Dawn", "date_earned": "2023-09-18"},
+        {"award_type": "SC", "dog_name": "Lionheart's Fast Track", "date_earned": "2024-05-20"},
+        {"award_type": "JC", "dog_name": "Lionheart's Quick Silver", "date_earned": "2024-07-12"},
+        {"award_type": "CHIC", "dog_name": "GCH Lionheart's Roaring Thunder", "date_earned": "2023-02-01"},
+        {"award_type": "BWH", "dog_name": "Kennel Award", "date_earned": "2023-01-01"}
+      ],
+      "health_tests": [
+        {"test_type": "Hip", "result": "OFA Good", "dog_name": "GCH Lionheart's Roaring Thunder", "date_tested": "2023-01-20"},
+        {"test_type": "Elbow", "result": "OFA Normal", "dog_name": "GCH Lionheart's Roaring Thunder", "date_tested": "2023-01-20"},
+        {"test_type": "Thyroid", "result": "OFA Normal", "dog_name": "GCH Lionheart's Roaring Thunder", "date_tested": "2023-01-25"},
+        {"test_type": "EOAD", "result": "Clear", "dog_name": "GCH Lionheart's Roaring Thunder", "date_tested": "2023-01-15"},
+        {"test_type": "Hip", "result": "OFA Good", "dog_name": "GCH Lionheart's Golden Sunrise", "date_tested": "2022-11-10"}
+      ],
+      "litters": [
+        {
+          "litter_id": "litter-2024-12",
+          "sire_name": "GCHG Lionheart's Roaring Thunder",
+          "dam_name": "GCH Lionheart's Golden Sunrise",
+          "birth_date": "2024-12-18",
+          "num_puppies": 7,
+          "available_puppies": 2,
+          "description": "Beautiful litter with excellent ridge quality. Both parents are multi-titled champions.",
+          "images": [
+            {"image_path": "lionheart/litter-2024-12-newborn.jpg", "caption": "Newborn puppies", "date_taken": "2024-12-18", "puppy_age_weeks": 0},
+            {"image_path": "lionheart/litter-2024-12-3wk.jpg", "caption": "Eyes are opening!", "date_taken": "2025-01-08", "puppy_age_weeks": 3}
+          ]
+        }
+      ]
+    },
+    {
+      "breeder_id": "sunridge-rr",
+      "kennel_name": "Sunridge Rhodesians",
+      "owner_name": "Jennifer Adams",
+      "location": "Phoenix, AZ",
+      "state": "AZ",
+      "website": "https://sunridgerhodesians.example.com",
+      "email": "jen@sunridgerhodesians.example.com",
+      "years_breeding": 15,
+      "rrcus_member": true,
+      "description": "Desert-based breeding program emphasizing health, athleticism, and sound temperament.",
+      "akc_awards": [
+        {"award_type": "BOM", "dog_name": "Kennel Award", "date_earned": "2020-08-01"},
+        {"award_type": "GCHB", "dog_name": "GCH Sunridge's Desert Rose", "date_earned": "2024-04-10"},
+        {"award_type": "GCH", "dog_name": "GCH Sunridge's Copper Canyon", "date_earned": "2023-06-15"},
+        {"award_type": "CH", "dog_name": "CH Sunridge's Morning Star", "date_earned": "2024-05-20"},
+        {"award_type": "MC", "dog_name": "Sunridge's Swift Shadow", "date_earned": "2024-03-15"},
+        {"award_type": "SC", "dog_name": "Sunridge's Desert Wind", "date_earned": "2023-10-22"},
+        {"award_type": "CHIC", "dog_name": "GCH Sunridge's Desert Rose", "date_earned": "2022-06-01"}
+      ],
+      "health_tests": [
+        {"test_type": "Hip", "result": "OFA Excellent", "dog_name": "GCH Sunridge's Desert Rose", "date_tested": "2022-05-15"},
+        {"test_type": "Elbow", "result": "OFA Normal", "dog_name": "GCH Sunridge's Desert Rose", "date_tested": "2022-05-15"},
+        {"test_type": "Cardiac", "result": "OFA Normal", "dog_name": "GCH Sunridge's Desert Rose", "date_tested": "2022-05-20"},
+        {"test_type": "DM", "result": "Clear", "dog_name": "GCH Sunridge's Desert Rose", "date_tested": "2022-04-01"}
+      ],
+      "litters": [
+        {
+          "litter_id": "litter-2024-11",
+          "sire_name": "GCHB Sunridge's Desert Rose",
+          "dam_name": "CH Sunridge's Morning Star",
+          "birth_date": "2024-11-22",
+          "num_puppies": 8,
+          "available_puppies": 0,
+          "description": "All puppies placed! Contact us about our waiting list.",
+          "images": [
+            {"image_path": "sunridge/litter-2024-11-week6.jpg", "caption": "6 weeks and growing fast", "date_taken": "2025-01-03", "puppy_age_weeks": 6}
+          ]
+        }
+      ]
+    },
+    {
+      "breeder_id": "african-sun-rr",
+      "kennel_name": "African Sun Ridgebacks",
+      "owner_name": "David & Lisa Thompson",
+      "location": "San Diego, CA",
+      "state": "CA",
+      "website": "https://africansunrr.example.com",
+      "email": "info@africansunrr.example.com",
+      "phone": "(619) 555-0276",
+      "years_breeding": 22,
+      "rrcus_member": true,
+      "description": "One of California's oldest Ridgeback breeding programs. Multiple Best in Show winners and Top 20 ranked dogs.",
+      "akc_awards": [
+        {"award_type": "BOM_GOLD", "dog_name": "Kennel Award", "date_earned": "2019-05-01"},
+        {"award_type": "GCHP", "dog_name": "GCH African Sun's Sahara King", "date_earned": "2023-09-30"},
+        {"award_type": "GCHG", "dog_name": "GCH African Sun's Golden Pride", "date_earned": "2024-06-15"},
+        {"award_type": "GCHS", "dog_name": "GCH African Sun's Veldt Princess", "date_earned": "2024-01-20"},
+        {"award_type": "GCH", "dog_name": "GCH African Sun's Red Earth", "date_earned": "2023-03-10"},
+        {"award_type": "CH", "dog_name": "CH African Sun's Safari Dream", "date_earned": "2024-07-22"},
+        {"award_type": "CH", "dog_name": "CH African Sun's Noble Spirit", "date_earned": "2024-04-18"},
+        {"award_type": "CH", "dog_name": "CH African Sun's Copper Glow", "date_earned": "2023-11-05"},
+        {"award_type": "FC", "dog_name": "FC African Sun's Lightning Bolt", "date_earned": "2024-02-28"},
+        {"award_type": "CHIC", "dog_name": "GCH African Sun's Sahara King", "date_earned": "2021-03-15"},
+        {"award_type": "CHIC", "dog_name": "GCH African Sun's Golden Pride", "date_earned": "2022-07-20"},
+        {"award_type": "CHIC", "dog_name": "GCH African Sun's Veldt Princess", "date_earned": "2022-11-10"}
+      ],
+      "health_tests": [
+        {"test_type": "Hip", "result": "OFA Excellent", "dog_name": "GCH African Sun's Sahara King", "date_tested": "2021-03-01"},
+        {"test_type": "Elbow", "result": "OFA Normal", "dog_name": "GCH African Sun's Sahara King", "date_tested": "2021-03-01"},
+        {"test_type": "Thyroid", "result": "OFA Normal", "dog_name": "GCH African Sun's Sahara King", "date_tested": "2021-03-10"},
+        {"test_type": "Cardiac", "result": "OFA Normal", "dog_name": "GCH African Sun's Sahara King", "date_tested": "2021-03-10"},
+        {"test_type": "DM", "result": "Clear", "dog_name": "GCH African Sun's Sahara King", "date_tested": "2021-02-15"},
+        {"test_type": "EOAD", "result": "Clear", "dog_name": "GCH African Sun's Sahara King", "date_tested": "2021-02-15"}
+      ],
+      "litters": [
+        {
+          "litter_id": "litter-2024-10",
+          "sire_name": "GCHP African Sun's Sahara King",
+          "dam_name": "GCHS African Sun's Veldt Princess",
+          "birth_date": "2024-10-15",
+          "num_puppies": 11,
+          "available_puppies": 3,
+          "description": "Outstanding litter from our top producing sire and dam. Show and companion prospects available.",
+          "images": [
+            {"image_path": "africansun/litter-2024-10-stack.jpg", "caption": "Show prospect evaluation at 8 weeks", "date_taken": "2024-12-10", "puppy_age_weeks": 8},
+            {"image_path": "africansun/litter-2024-10-play.jpg", "caption": "Socialization time", "date_taken": "2024-12-05", "puppy_age_weeks": 7}
+          ]
+        }
+      ]
+    },
+    {
+      "breeder_id": "highland-rr",
+      "kennel_name": "Highland Ridge Rhodesians",
+      "owner_name": "Robert MacGregor",
+      "location": "Seattle, WA",
+      "state": "WA",
+      "website": "https://highlandridgerr.example.com",
+      "email": "rob@highlandridgerr.example.com",
+      "years_breeding": 8,
+      "rrcus_member": true,
+      "description": "Pacific Northwest breeder focused on producing sound, healthy Ridgebacks for show and companion homes.",
+      "akc_awards": [
+        {"award_type": "BOM", "dog_name": "Kennel Award", "date_earned": "2023-09-01"},
+        {"award_type": "GCH", "dog_name": "GCH Highland's Misty Mountain", "date_earned": "2024-07-20"},
+        {"award_type": "CH", "dog_name": "CH Highland's Pacific Pride", "date_earned": "2024-03-15"},
+        {"award_type": "CH", "dog_name": "CH Highland's Cascade Copper", "date_earned": "2023-10-28"},
+        {"award_type": "JC", "dog_name": "Highland's Swift Current", "date_earned": "2024-06-10"},
+        {"award_type": "CHIC", "dog_name": "GCH Highland's Misty Mountain", "date_earned": "2023-05-01"},
+        {"award_type": "CGC", "dog_name": "Highland's Good Citizen", "date_earned": "2024-01-15"}
+      ],
+      "health_tests": [
+        {"test_type": "Hip", "result": "OFA Good", "dog_name": "GCH Highland's Misty Mountain", "date_tested": "2023-04-15"},
+        {"test_type": "Elbow", "result": "OFA Normal", "dog_name": "GCH Highland's Misty Mountain", "date_tested": "2023-04-15"},
+        {"test_type": "Thyroid", "result": "OFA Normal", "dog_name": "GCH Highland's Misty Mountain", "date_tested": "2023-04-20"}
+      ],
+      "litters": []
+    },
+    {
+      "breeder_id": "veldt-rr",
+      "kennel_name": "Veldt View Ridgebacks",
+      "owner_name": "Amanda Foster",
+      "location": "Tampa, FL",
+      "state": "FL",
+      "website": "https://veldtviewrr.example.com",
+      "email": "amanda@veldtviewrr.example.com",
+      "phone": "(813) 555-0334",
+      "years_breeding": 10,
+      "rrcus_member": false,
+      "description": "Southeast breeder specializing in performance Ridgebacks. Our dogs excel in lure coursing and agility.",
+      "akc_awards": [
+        {"award_type": "GCHS", "dog_name": "GCH Veldt View's Southern Star", "date_earned": "2024-05-10"},
+        {"award_type": "CH", "dog_name": "CH Veldt View's Gulf Breeze", "date_earned": "2023-08-20"},
+        {"award_type": "CH", "dog_name": "CH Veldt View's Sunshine State", "date_earned": "2024-02-14"},
+        {"award_type": "MACH", "dog_name": "MACH Veldt View's Flying Ace", "date_earned": "2024-04-30"},
+        {"award_type": "MC", "dog_name": "Veldt View's Speed Demon", "date_earned": "2023-11-15"},
+        {"award_type": "SC", "dog_name": "Veldt View's Fast Lane", "date_earned": "2024-03-20"},
+        {"award_type": "AX", "dog_name": "Veldt View's Agile Spirit", "date_earned": "2024-06-05"}
+      ],
+      "health_tests": [
+        {"test_type": "Hip", "result": "OFA Good", "dog_name": "GCH Veldt View's Southern Star", "date_tested": "2022-08-10"},
+        {"test_type": "Elbow", "result": "OFA Normal", "dog_name": "GCH Veldt View's Southern Star", "date_tested": "2022-08-10"}
+      ],
+      "litters": [
+        {
+          "litter_id": "litter-2024-09",
+          "sire_name": "GCHS Veldt View's Southern Star",
+          "dam_name": "MACH Veldt View's Flying Ace",
+          "birth_date": "2024-09-28",
+          "num_puppies": 6,
+          "available_puppies": 1,
+          "description": "Performance-bred litter. Both parents titled in multiple venues.",
+          "images": [
+            {"image_path": "veldtview/litter-2024-09-running.jpg", "caption": "Future coursing stars!", "date_taken": "2024-12-20", "puppy_age_weeks": 12}
+          ]
+        }
+      ]
+    }
+  ]
+}

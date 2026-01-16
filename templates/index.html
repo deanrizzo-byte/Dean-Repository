@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}Top Rhodesian Ridgeback Breeders - Ridgeback Finder{% endblock %}
+
+{% block content %}
+<section class="hero">
+    <h1>Find Top Rhodesian Ridgeback Breeders</h1>
+    <p>Discover AKC award-winning breeders committed to health, temperament, and breed excellence</p>
+</section>
+
+<section class="stats-bar">
+    <div class="stat">
+        <span class="stat-number">{{ stats.total_breeders }}</span>
+        <span class="stat-label">Breeders</span>
+    </div>
+    <div class="stat">
+        <span class="stat-number">{{ stats.total_champions }}</span>
+        <span class="stat-label">Champions</span>
+    </div>
+    <div class="stat">
+        <span class="stat-number">{{ stats.breeders_of_merit }}</span>
+        <span class="stat-label">Breeders of Merit</span>
+    </div>
+    <div class="stat">
+        <span class="stat-number">{{ stats.states_covered }}</span>
+        <span class="stat-label">States</span>
+    </div>
+</section>
+
+<section class="quick-search">
+    <h2>Quick Search</h2>
+    <form action="{{ url_for('search') }}" method="get" class="search-form">
+        <select name="state" class="form-select">
+            <option value="">All States</option>
+            {% for state in states %}
+            <option value="{{ state }}">{{ state }}</option>
+            {% endfor %}
+        </select>
+        <label class="checkbox-label">
+            <input type="checkbox" name="breeder_of_merit" value="true">
+            Breeder of Merit
+        </label>
+        <label class="checkbox-label">
+            <input type="checkbox" name="chic" value="true">
+            CHIC Health Tested
+        </label>
+        <button type="submit" class="btn btn-primary">Search</button>
+    </form>
+</section>
+
+<section class="top-breeders">
+    <h2>Top Ranked Breeders</h2>
+    <p class="section-subtitle">Ranked by AKC awards, health testing, and breed club membership</p>
+
+    {% if breeders %}
+    <div class="breeder-grid">
+        {% for breeder in breeders %}
+        <article class="breeder-card">
+            <div class="breeder-header">
+                <h3 class="kennel-name">{{ breeder.kennel_name }}</h3>
+                <span class="award-score" title="Award Score">{{ breeder.award_score }} pts</span>
+            </div>
+
+            <div class="breeder-badges">
+                {% if breeder.has_breeder_of_merit %}
+                <span class="badge badge-gold">Breeder of Merit</span>
+                {% endif %}
+                {% if breeder.has_chic_dogs %}
+                <span class="badge badge-health">CHIC</span>
+                {% endif %}
+                {% if breeder.rrcus_member %}
+                <span class="badge badge-club">RRCUS</span>
+                {% endif %}
+            </div>
+
+            <div class="breeder-info">
+                <p><strong>{{ breeder.owner_name }}</strong></p>
+                <p class="location">{{ breeder.location }}</p>
+                <p class="champions">{{ breeder.total_champions }} Champion(s)</p>
+            </div>
+
+            <div class="breeder-actions">
+                <a href="{{ url_for('breeder_detail', breeder_id=breeder.breeder_id) }}" class="btn btn-outline">View Details</a>
+                <a href="{{ url_for('breeder_gallery', breeder_id=breeder.breeder_id) }}" class="btn btn-outline">View Litters</a>
+            </div>
+        </article>
+        {% endfor %}
+    </div>
+    {% else %}
+    <div class="empty-state">
+        <p>No breeders in the database yet. Add breeders to get started!</p>
+    </div>
+    {% endif %}
+</section>
+
+<section class="info-section">
+    <h2>What We Look For in Top Breeders</h2>
+    <div class="info-grid">
+        <div class="info-card">
+            <h3>AKC Titles & Awards</h3>
+            <p>Champions, Grand Champions, and performance titles demonstrate breeding quality dogs that meet breed standards.</p>
+        </div>
+        <div class="info-card">
+            <h3>Health Testing (CHIC)</h3>
+            <p>CHIC-certified dogs have completed all recommended health tests for Rhodesian Ridgebacks including hips, elbows, thyroid, and more.</p>
+        </div>
+        <div class="info-card">
+            <h3>Breeder of Merit</h3>
+            <p>AKC Breeder of Merit designation recognizes breeders who demonstrate a commitment to health, education, and breed preservation.</p>
+        </div>
+        <div class="info-card">
+            <h3>RRCUS Membership</h3>
+            <p>Members of the Rhodesian Ridgeback Club of the United States agree to abide by a code of ethics for responsible breeding.</p>
+        </div>
+    </div>
+</section>
+{% endblock %}

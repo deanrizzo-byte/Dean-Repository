@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block title %}{{ breeder.kennel_name }} Photos - Ridgeback Finder{% endblock %}
+
+{% block content %}
+<section class="page-header">
+    <nav class="breadcrumb">
+        <a href="{{ url_for('index') }}">Home</a> /
+        <a href="{{ url_for('breeder_detail', breeder_id=breeder.breeder_id) }}">{{ breeder.kennel_name }}</a> /
+        Photos
+    </nav>
+    <h1>{{ breeder.kennel_name }} - Litter Photos</h1>
+    <p>Browse all litter photos from {{ breeder.kennel_name }}</p>
+</section>
+
+<section class="breeder-litters">
+    {% if breeder.litters %}
+    {% for litter in breeder.litters|sort(attribute='birth_date', reverse=True) %}
+    <div class="litter-section">
+        <div class="litter-header">
+            <h2>{{ litter.sire_name }} x {{ litter.dam_name }}</h2>
+            <p class="litter-meta">
+                Born: {{ litter.birth_date.strftime('%B %d, %Y') }} |
+                {{ litter.num_puppies }} puppies
+                {% if litter.available_puppies > 0 %}
+                | <span class="badge badge-success">{{ litter.available_puppies }} Available</span>
+                {% endif %}
+            </p>
+            {% if litter.description %}
+            <p class="litter-description">{{ litter.description }}</p>
+            {% endif %}
+        </div>
+
+        {% if litter.images %}
+        <div class="litter-gallery">
+            {% for image in litter.images %}
+            <div class="gallery-item" onclick="openLightbox('{{ get_image_url(image.image_path) }}', '{{ image.caption or '' }}')">
+                <img src="{{ get_image_url(image.image_path) }}"
+                     alt="{{ image.caption or 'Puppy photo' }}"
+                     loading="lazy">
+                <div class="image-overlay">
+                    {% if image.puppy_age_weeks %}
+                    <span class="age-tag">{{ image.puppy_age_weeks }} weeks</span>
+                    {% endif %}
+                    {% if image.caption %}
+                    <p class="caption">{{ image.caption }}</p>
+                    {% endif %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        {% else %}
+        <p class="no-photos">No photos uploaded for this litter yet.</p>
+        {% endif %}
+    </div>
+    {% endfor %}
+    {% else %}
+    <div class="empty-state">
+        <h3>No litters recorded</h3>
+        <p>This breeder hasn't recorded any litters yet.</p>
+    </div>
+    {% endif %}
+</section>
+
+<!-- Lightbox Modal -->
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="">
+    <p id="lightbox-caption"></p>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+function openLightbox(src, caption) {
+    const lightbox = document.getElementById('lightbox');
+    const img = document.getElementById('lightbox-img');
+    const cap = document.getElementById('lightbox-caption');
+    img.src = src;
+    cap.textContent = caption;
+    lightbox.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+});
+</script>
+{% endblock %}
